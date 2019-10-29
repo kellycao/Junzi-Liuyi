@@ -1,0 +1,25 @@
+body{
+  background-image: url(image/background.jpg);
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+h1{
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 80px;
+  padding-left: 2em;
+  /* transition: padding-left 2s; */
+  padding-top: 1.5em;
+  line-height: 70px;
+  opacity: 0.75;
+}
+
+#indent{
+padding-left: 2em;
+padding-top: 0;
+/* transition: padding-left 2s; */
+}
+
+/* h1:hover{
+  padding-left: 1.5em;
+} */
