@@ -1,25 +1,82 @@
+
 body{
-  background-image: url(image/background.jpg);
-  background-size: 60%;
+  max-width: 1000px;
+  margin:auto auto auto 2em;
+  background-image: url(image/background3.jpg);
+  background-size:100% 100%;
   background-repeat: no-repeat;
+  background-position:0 0;
+  background-attachment: fixed;
 }
 
 h1{
+  width:400px;
   font-family: "Liu Jian Mao Cao", cursive;
-  font-size: 80px;
-  padding-left: 2em;
-  /* transition: padding-left 2s; */
-  padding-top: 1.5em;
-  line-height: 70px;
+  font-size: 90px;
+  line-height: 80px;
   opacity: 0.75;
+  text-align: center;
+
 }
 
-#indent{
-padding-left: 2em;
-padding-top: 0;
-/* transition: padding-left 2s; */
+#headline{
+  margin-top: 5em;
 }
 
-/* h1:hover{
-  padding-left: 1.5em;
-} */
+#menu{
+  /* padding: 10px -30px 10px -30px; */
+margin: 5em auto;
+}
+
+h2{
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 60px;
+  text-align: center;
+  position:absolute;
+  z-index: -1;
+  left: 65px;
+  top: 5px;
+}
+
+h3{
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 60px;
+  text-align: center;
+  position:absolute;
+  z-index: -1;
+  left: 65px;
+  top: 150px;
+}
+
+
+img{
+  width: 198px;
+  height: 180px;
+}
+.box{
+  width: 165px;
+  height: 150px;
+}
+
+.img-group{
+  position: relative;
+  margin: 10px -30px 10px -30px;
+
+}
+
+img:hover{
+  transform: rotate(360deg);
+transition: transform 5s;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  display:flex;
+  flex-direction: column;
+}
+.column-reverse{
+  display:flex;
+  flex-direction: column-reverse;
+}
