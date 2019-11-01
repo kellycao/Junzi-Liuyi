@@ -17,8 +17,11 @@
 <body>
 
 <div class="container">
-  <canvas id="canvas" width="420" height="520"></canvas>
-
+  <canvas id="canvas" width="420" height="520"  onmousedown="onMouseDown(event)" onmouseup="onMouseUp(event)" onmousemove="onMouseMove(event)" onmouseout="onMouseOut(event)"></canvas>
+  <div> <a href="#" onclick="start()"> Reset </a> &nbsp &nbsp &nbsp
+        <a href="#" onclick="help()"> Help </a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp
+        <span id="counter"> Moves: 0 </span>
+ </div>
 </div>
 
 
