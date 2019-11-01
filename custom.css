@@ -6,8 +6,10 @@ body {
   background-attachment: fixed;
 }
 
+
 h1 {
   width: 100px;
+  height: 180px;
   font-family: "Liu Jian Mao Cao", cursive;
   font-size: 90px;
   opacity: 0.75;
@@ -18,11 +20,11 @@ h1 {
 }
 
 #headline {
-  margin: auto 3em auto 6em;
+  margin: 4em 2em auto 6em;
 }
 
 #menu {
-  margin: 5em auto 3.5em 5em;
+  margin: 4em auto 3em 5em;
 }
 
 h2 {
@@ -33,18 +35,20 @@ h2 {
   z-index: -1;
   left: 65px;
   top: 5px;
-  text-shadow: 5px 5px 5px #9fa6ad;
 }
 
-h3 {
-  font-family: "Liu Jian Mao Cao", cursive;
-  font-size: 60px;
-  text-align: center;
-  position: absolute;
-  z-index: -1;
+
+#indent{
   left: 67px;
-  top: 145px;
-  text-shadow: 5px 5px 5px #9fa6ad;
+  top: 160px;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
 }
 
 img {
@@ -58,7 +62,7 @@ img {
 }
 
 .img-group {
-  position: relative;
+  position:relative;
   margin: 20px -30px 10px -30px;
 }
 
