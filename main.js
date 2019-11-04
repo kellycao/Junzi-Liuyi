@@ -15,30 +15,17 @@ window.onload=function(){
 
 var words = document.getElementsByTagName('h2');
 var imgGroup = document.getElementsByTagName('img');
-var i=0;
-function shadow(i){
-  imgGroup[i].onmouseover = function(){
-  words[i].style.textShadow = "5px 5px 5px #9fa6ad";
+var i;
+
+  function shadow(i){
+    imgGroup[i].onmouseover = function(){
+    words[i].style.textShadow = "5px 5px 5px #9fa6ad";
+    }
+    imgGroup[i].onmouseout = function(){
+      words[i].style.textShadow = "none";
+    }
   }
-  imgGroup[i].onmouseout = function(){
-    words[i].style.textShadow = "none";
-  }
+
+for (i=0; i<imgGroup.length; i++){
+  shadow(i);
 }
-shadow(0);
-shadow(1);
-shadow(2);
-shadow(3);
-shadow(4);
-shadow(5);
-shadow(6);
-
-
-//   for (var i=0; i<3; i++){
-//     for (var j=0; j<3; j++){
-//       if (i===j) {
-//       ruleGroup[i].onmouseover = function(){
-//     rule[j].style.textShadow = "5px 5px 5px #9fa6ad";
-//     }
-//   }
-//   }
-// }
