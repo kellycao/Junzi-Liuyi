@@ -15,7 +15,7 @@ window.onload=function(){
 
 var words = document.getElementsByTagName('h2');
 var imgGroup = document.getElementsByTagName('img');
-var i;
+// var i;
 
   function shadow(i){
     imgGroup[i].onmouseover = function(){
@@ -26,6 +26,6 @@ var i;
     }
   }
 
-for (i=0; i<imgGroup.length; i++){
+for (var i=0; i<imgGroup.length; i++){
   shadow(i);
 }

@@ -148,7 +148,7 @@ function calDistance(loc1, loc2) {
   return Math.sqrt((loc1.x - loc2.x) * (loc1.x - loc2.x) + (loc1.y - loc2.y) * (loc1.y - loc2.y));
 }
 
-//faster and thinner
+//the faster the thinner
 var maxLineWidth = 20;
 var minLineWidth = 1;
 var maxLineSpeed = 10;
