@@ -106,64 +106,109 @@ ins[15] = document.getElementById("ins15");
 
 //play instrument
 function p1(){
+  ins[1].style.transition = 'transform .2s';
+  ins[1].style.transform = 'scale(1.2)';
   sounds[1].playMode('restart');
   sounds[1].play();
+  setTimeout(function(){ins[1].style.transform = 'scale(1)'; }, 200);
 }
 function p2(){
+  ins[2].style.transition = 'transform .2s';
+  ins[2].style.transform = 'scale(1.2)';
   sounds[2].playMode('restart');
   sounds[2].play();
+  setTimeout(function(){ins[2].style.transform = 'scale(1)'; }, 200);
 }
 function p3(){
+  ins[3].style.transition = 'transform .2s';
+  ins[3].style.transform = 'scale(1.2)';
   sounds[3].playMode('restart');
   sounds[3].play();
+  setTimeout(function(){ins[3].style.transform = 'scale(1)'; }, 200);
 }
 function p4(){
+  ins[4].style.transition = 'transform .2s';
+  ins[4].style.transform = 'scale(1.2)';
   sounds[4].playMode('restart');
   sounds[4].play();
+  setTimeout(function(){ins[4].style.transform = 'scale(1)'; }, 200);
 }
 function p55(){
+  ins[5].style.transition = 'transform .2s';
+  ins[5].style.transform = 'scale(1.2)';
   sounds[5].playMode('restart');
   sounds[5].play();
+  setTimeout(function(){ins[5].style.transform = 'scale(1)'; }, 200);
 }
 function p6(){
+  ins[6].style.transition = 'transform .2s';
+  ins[6].style.transform = 'scale(1.2)';
   sounds[6].playMode('restart');
   sounds[6].play();
+  setTimeout(function(){ins[6].style.transform = 'scale(1)'; }, 200);
 }
 function p7(){
+  ins[7].style.transition = 'transform .2s';
+  ins[7].style.transform = 'scale(1.2)';
   sounds[7].playMode('restart');
   sounds[7].play();
+  setTimeout(function(){ins[7].style.transform = 'scale(1)'; }, 200);
 }
 function p8(){
+  ins[8].style.transition = 'transform .2s';
+  ins[8].style.transform = 'scale(1.2)';
   sounds[8].playMode('restart');
   sounds[8].play();
+  setTimeout(function(){ins[8].style.transform = 'scale(1)'; }, 200);
 }
 function p9(){
+  ins[9].style.transition = 'transform .2s';
+  ins[9].style.transform = 'scale(1.2)';
   sounds[9].playMode('restart');
   sounds[9].play();
+  setTimeout(function(){ins[9].style.transform = 'scale(1)'; }, 200);
 }
 function p10(){
+  ins[10].style.transition = 'transform .2s';
+  ins[10].style.transform = 'scale(1.2)';
   sounds[10].playMode('restart');
   sounds[10].play();
+  setTimeout(function(){ins[10].style.transform = 'scale(1)'; }, 200);
 }
 function p11(){
+  ins[11].style.transition = 'transform .2s';
+  ins[11].style.transform = 'scale(1.2)';
   sounds[11].playMode('restart');
   sounds[11].play();
+  setTimeout(function(){ins[11].style.transform = 'scale(1)'; }, 200);
 }
 function p12(){
+  ins[12].style.transition = 'transform .2s';
+  ins[12].style.transform = 'scale(1.2)';
   sounds[12].playMode('restart');
   sounds[12].play();
+  setTimeout(function(){ins[12].style.transform = 'scale(1)'; }, 200);
 }
 function p13(){
+  ins[13].style.transition = 'transform .2s';
+  ins[13].style.transform = 'scale(1.2)';
   sounds[13].playMode('restart');
   sounds[13].play();
+  setTimeout(function(){ins[13].style.transform = 'scale(1)'; }, 200);
 }
 function p14(){
+  ins[14].style.transition = 'transform .2s';
+  ins[14].style.transform = 'scale(1.2)';
   sounds[14].playMode('restart');
   sounds[14].play();
+  setTimeout(function(){ins[14].style.transform = 'scale(1)'; }, 200);
 }
 function p15(){
+  ins[15].style.transition = 'transform .2s';
+  ins[15].style.transform = 'scale(1.2)';
   sounds[15].playMode('restart');
   sounds[15].play();
+  setTimeout(function(){ins[15].style.transform = 'scale(1)'; }, 200);
 }
 
 
@@ -188,7 +233,9 @@ function p15(){
 function keyPressed(){
   // console.log("hello");
   if (keyCode === 65) {
+
     p1();
+
   } else if (keyCode === 87){
     p2();
   } else if (keyCode === 82){
