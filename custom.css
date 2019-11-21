@@ -69,6 +69,7 @@ img {
 img:hover {
   transform: rotate(360deg);
   transition: transform 5s;
+  cursor:pointer;
 }
 
 .row {

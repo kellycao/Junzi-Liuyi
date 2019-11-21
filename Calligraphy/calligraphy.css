@@ -1,0 +1,76 @@
+body{
+	background-image: url(../image/background3.jpg);
+	background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
+}
+
+#canvas{
+	display:block;
+	margin:50px auto auto auto;
+	border:1px solid #aaa;
+}
+
+#controller{
+	margin:0 auto;
+}
+
+.op_btn{
+	float:right;
+	margin:10px 0 0 10px;
+	border:2px solid #aaaaaa;
+	width:80px;
+	height:40px;
+	line-height:40px;
+	font-size:20px;
+	text-align:center;
+	border-radius:5px ;
+	cursor:pointer;
+	background:#fff;
+	font-weight:bold;
+	font-family: "Microsoft Yahei", Arial;
+}
+
+.op_btn
+{
+	background-color:#DDEEFF;
+}
+
+.clearfix{
+    clear:both;
+}
+
+.color_btn{
+    float: left;
+    margin: 10px 10px 0 0;
+    border:2px solid white;
+    width:40px;
+    height:40px;
+    border-radius: 5px 5px;
+    cursor:pointer;
+}
+.color_btn:hover{
+    border: 3px solid #aaaaaa;
+}
+.color_btn_selected{
+    border: 3px solid #aaaaaa;
+}
+#black_btn{
+    background-color: black;
+}
+#brown_btn{
+    background-color: #855300;
+}
+#grey_btn{
+    background-color: #81847C;
+}
+#red_btn{
+    background-color: #802900;
+}
+#redbrown_btn{
+    background-color: #853F00;
+}
+#lightgrey_btn{
+    background-color: #CCC5C0;
+}
