@@ -40,32 +40,32 @@ var Board = function(ctx) {
     this.ctx.width - 2 * this.border_width,
     this.ctx.height - 2 * this.border_width
   );
-  this.tiles = [
-    new Tile(0, 0, 1, 2, "#007ACC"),
-    new Tile(1, 0, 2, 2, "#FF7D7D"),
-    new Tile(3, 0, 1, 2, "#007ACC"),
-    new Tile(1, 2, 2, 1, "#EBCAFE"),
-    new Tile(0, 2, 1, 2, "#007ACC"),
-    new Tile(1, 3, 1, 1, "#AAD1DA"),
-    new Tile(0, 4, 1, 1, "#AAD1DA"),
-    new Tile(2, 3, 1, 1, "#AAD1DA"),
-    new Tile(3, 4, 1, 1, "#AAD1DA"),
-    new Tile(3, 2, 1, 2, "#007ACC"),
-  ];
+  // this.tiles = [
+  //   new Tile(0, 0, 1, 2, "#007ACC"),
+  //   new Tile(1, 0, 2, 2, "#FF7D7D"),
+  //   new Tile(3, 0, 1, 2, "#007ACC"),
+  //   new Tile(1, 2, 2, 1, "#EBCAFE"),
+  //   new Tile(0, 2, 1, 2, "#007ACC"),
+  //   new Tile(1, 3, 1, 1, "#AAD1DA"),
+  //   new Tile(0, 4, 1, 1, "#AAD1DA"),
+  //   new Tile(2, 3, 1, 1, "#AAD1DA"),
+  //   new Tile(3, 4, 1, 1, "#AAD1DA"),
+  //   new Tile(3, 2, 1, 2, "#007ACC"),
+  // ];
 
   // attempts to make image tiles
-  // this.tiles = [
-  //   new Tile(0, 0, 1, 2, "/Math/images/zhangfei.jpg"),
-  //   new Tile(1, 0, 2, 2, "/Math/images/caocao.png"),
-  //   new Tile(3, 0, 1, 2, "/Math/images/machao.png"),
-  //   new Tile(1, 2, 2, 1, "/Math/images/guanyu.png"),
-  //   new Tile(0, 2, 1, 2, "/Math/images/huangzhong.png"),
-  //   new Tile(1, 3, 1, 1, "/Math/images/zu.png"),
-  //   new Tile(0, 4, 1, 1, "/Math/images/zu.png"),
-  //   new Tile(2, 3, 1, 1, "/Math/images/zu.png"),
-  //   new Tile(3, 4, 1, 1, "/Math/images/zu.png"),
-  //   new Tile(3, 2, 1, 2, "/Math/images/zhaoyun.png"),
-  // ];
+  this.tiles = [
+    new Tile(0, 0, 1, 2, "/Math/images/zhangfei.jpg"),
+    new Tile(1, 0, 2, 2, "/Math/images/caocao.png"),
+    new Tile(3, 0, 1, 2, "/Math/images/machao.png"),
+    new Tile(1, 2, 2, 1, "/Math/images/guanyu.png"),
+    new Tile(0, 2, 1, 2, "/Math/images/huangzhong.png"),
+    new Tile(1, 3, 1, 1, "/Math/images/zu.png"),
+    new Tile(0, 4, 1, 1, "/Math/images/zu.png"),
+    new Tile(2, 3, 1, 1, "/Math/images/zu.png"),
+    new Tile(3, 4, 1, 1, "/Math/images/zu.png"),
+    new Tile(3, 2, 1, 2, "/Math/images/zhaoyun.png"),
+  ];
 }
 
 Board.prototype.draw = function() {
@@ -90,17 +90,18 @@ var Tile = function(t_x, t_y, t_width, t_height, color) {
   this.t_width = t_width;
   this.size = tile_size;
   this.padding = 6;
-  this.color = color;
+  // this.color = color;
   // this.get_me_out = (t_width == t_height & t_width == 2);
 
 
   //attempts to make image tile
-  // this.image = new Image();
-  // this.image.onload = function(){
-  //   this.ImageReady = true;
-  //   console.log(this.image);
-  // }
-  // this.image.src = imageurl;
+  this.image = new Image();
+  this.image.src = color;
+  console.log("image helper");
+  this.image.onload = function(){
+    console.log("image has loaded");
+
+  };
 
 }
 
@@ -111,16 +112,16 @@ Tile.prototype.draw = function() {
   board.ctx.shadowColor = "gray";
 
   //attempts to make picture tile
-  // board.ctx.drawImage(this.image,
-  //       this.t_x, this.t_y,
-  //       this.t_width, this.t_height);//display
+  board.ctx.drawImage(this.image,
+        this.t_x, this.t_y,
+        this.t_width, this.t_height);//display
 
-  board.ctx.fillStyle = this.color;
-  board.ctx.fillRect(
-  board.playing_surface.x + this.t_x * this.size + this.padding,
-  board.playing_surface.y + this.t_y * this.size + this.padding,
-  this.t_width * this.size - this.padding * 2,
-  this.t_height * this.size - this.padding * 2);
+  // board.ctx.fillStyle = this.color;
+  // board.ctx.fillRect(
+  // board.playing_surface.x + this.t_x * this.size + this.padding,
+  // board.playing_surface.y + this.t_y * this.size + this.padding,
+  // this.t_width * this.size - this.padding * 2,
+  // this.t_height * this.size - this.padding * 2);
 
   board.ctx.shadowColor = "transparent";
   board.ctx.strokeStyle = "black";

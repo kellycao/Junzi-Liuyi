@@ -1,107 +1,97 @@
+//get canvas
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
-// load images
 
-var bird = new Image();
+//load images
+var rider = new Image();
 var bg = new Image();
-var fg = new Image();
-var pipeNorth = new Image();
-var pipeSouth = new Image();
+var cloud = new Image();
 
-rider.src = "../Rider/images/bird.png";
-bg.src = "../Rider/images/background2.png";
-fg.src = "images/fg.png";
-pipeNorth.src = "images/pipeNorth.png";
-pipeSouth.src = "images/pipeSouth.png";
+rider.src = "images/rider.png";
+bg.src = "images/bg.jpg";
+cloud.src = "images/cloud.png";
 
-
-// some variables
-
-var gap = 85;
-var constant;
-
-var bX = 10;
-var bY = 150;
-
+//constants
+//locagtions
+var riderx = 400;
+var ridery = cvs.height - 370;
+var cloudx = 200;
+var cloudy = 355;
+var ground = 75;
+//other settings
 var gravity = 1.5;
-
 var score = 0;
 
-// audio files
 
-var fly = new Audio();
-var scor = new Audio();
+function jump() {
+  // if(rider<=(cvs.height-ground-rider.height-150)){
+  ridery -= 100;
+}
+document.addEventListener("keydown", jump);
 
-fly.src = "sounds/fly.mp3";
-scor.src = "sounds/score.mp3";
-
-// on key down
-
-document.addEventListener("keydown",moveUp);
-
-function moveUp(){
-    bY -= 25;
-    fly.play();
+//cloud coordinates
+var clouds = [];
+clouds[0] = {
+  x: 400,
+  y: cloudy
 }
 
-// pipe coordinates
-
-var pipe = [];
-
-pipe[0] = {
-    x : cvs.width,
-    y : 0
-};
-
-// draw images
-
-function draw(){
-
-    ctx.drawImage(bg,0,0);
 
 
-    for(var i = 0; i < pipe.length; i++){
-
-        constant = pipeNorth.height+gap;
-        ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
-        ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y+constant);
-
-        pipe[i].x--;
-
-        if( pipe[i].x == 125 ){
-            pipe.push({
-                x : cvs.width,
-                y : Math.floor(Math.random()*pipeNorth.height)-pipeNorth.height
-            });
-        }
-
-        // detect collision
-
-        if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
-            location.reload(); // reload the page
-        }
-
-        if(pipe[i].x == 5){
-            score++;
-            scor.play();
-        }
-
-
+function start() {
+  ctx.drawImage(bg, 0, 0, 1300, 512);
+  for (var i = 0; i < clouds.length; i++) {
+    ctx.drawImage(cloud, clouds[i].x, cloudy, 200, 75);
+    clouds[i].x--;
+    if (clouds[i].x == 399) {
+      clouds.push({
+        x: 400 + Math.floor(Math.random() * 600),
+        y: cloudy
+      });
     }
 
-    ctx.drawImage(fg,0,cvs.height - fg.height);
+    //detect stand
+    if ((clouds[i].x < riderx + rider.width) && (riderx < clouds[i].x + cloud.width) && (ridery + rider.height > clouds[i].y + cloud.height)) {
+      // on key down
+      // document.addEventListener("keydown", jump);
 
-    ctx.drawImage(bird,bX,bY);
+    }
+    //detect falling
+    else if (ridery + rider.height > clouds[i].y + cloud.height) {
 
-    bY += gravity;
+      //game over.
+      // gameover();
+    } else {
+      event.preventDefault();
+    }
 
+    if (clouds[i].x == 70) {
+      score++;
+    }
     ctx.fillStyle = "#000";
     ctx.font = "20px Verdana";
-    ctx.fillText("Score : "+score,10,cvs.height-20);
+    ctx.fillText("Score : " + score, 10, cvs.height - 20);
 
-    requestAnimationFrame(draw);
+  }
 
+  ctx.drawImage(rider, riderx, ridery, 200, 200);
+  ridery += gravity;
+  requestAnimationFrame(start);
 }
 
-draw();
+function gameover() {
+  location.reload();
+
+}
+start();
+
+
+
+
+
+
+
+
+
+//space helper

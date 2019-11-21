@@ -1,0 +1,64 @@
+* {
+margin: 0;
+padding: 0;
+/* display: inline-block; */
+}
+
+body {
+  max-width: 1000px;
+  margin: auto auto auto 2em;
+  background-image: url(../image/background3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
+}
+
+.container{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  /* position: relative; */
+}
+
+#canvas{
+  display: inline-block;
+}
+
+img{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.bg{
+  z-index: 0;
+}
+
+.ins{
+  z-index: 1;
+}
+
+.keys{
+  position: absolute;
+  z-index: 2;
+  display: none;
+
+}
+
+.ins:hover{
+  transform: scale(1.05);
+}
+
+.ins:active{
+  transform: scale(1.2);
+}
+
+.row{
+  position: relative;
+}
+
+.btns{
+  top: 600px;
+  left: 100px;
+}
