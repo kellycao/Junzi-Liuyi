@@ -50,12 +50,14 @@ img{
   transform: scale(1.05);
 }
 
-.ins:active{
+/* .ins:active{
   transform: scale(1.2);
-}
+} */
 
 .row{
   position: relative;
+  justify-content: center;
+
 }
 
 .btns{

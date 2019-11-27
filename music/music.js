@@ -1,63 +1,3 @@
-// //get canvas
-// var cvs = document.getElementById("canvas");
-// var ctx = cvs.getContext("2d");
-// //load images
-// var set = new Image();
-// var i1 = new Image();
-// var i2 = new Image();
-// var i3 = new Image();
-// var i4 = new Image();
-// var i5 = new Image();
-// var i6 = new Image();
-// var i7 = new Image();
-// var i8 = new Image();
-// var i9 = new Image();
-// var i10 = new Image();
-// var i11 = new Image();
-// var i12 = new Image();
-// var i13 = new Image();
-// var i14 = new Image();
-// var i15 = new Image();
-// set.src = "/music/images/set.jpg";
-// i1.src = "/music/images/1.png";
-// i2.src = "/music/images/2.png";
-// i3.src = "/music/images/3.png";
-// i4.src = "/music/images/4.png";
-// i5.src = "/music/images/5.png";
-// i6.src = "/music/images/6.png";
-// i7.src = "/music/images/7.png";
-// i8.src = "/music/images/8.png";
-// i9.src = "/music/images/9.png";
-// i10.src = "/music/images/10.png";
-// i11.src = "/music/images/11.png";
-// i12.src = "/music/images/12.png";
-// i13.src = "/music/images/13.png";
-// i14.src = "/music/images/14.png";
-// i15.src = "/music/images/15.png";
-//
-// //onclick --> image gets larger effect
-//
-//
-
-//load instruments sound track
-// let sounds=[];
-//js
-// sounds[0] = new Audio();//place holder
-// sounds[1] = new Audio('/music/audio/1.mp3');
-// sounds[2] = new Audio('/music/audio/2.mp3');
-// sounds[3] = new Audio('/music/audio/3.mp3');
-// sounds[4] = new Audio('/music/audio/4.mp3');
-// sounds[5] = new Audio('/music/audio/5.mp3');
-// sounds[6] = new Audio('/music/audio/6.mp3');
-// sounds[7] = new Audio('/music/audio/7.mp3');
-// sounds[8] = new Audio('/music/audio/8.mp3');
-// sounds[9] = new Audio('/music/audio/9.mp3');
-// sounds[10] = new Audio('/music/audio/10.mp3');
-// sounds[11] = new Audio('/music/audio/11.mp3');
-// sounds[12] = new Audio('/music/audio/12.mp3');
-// sounds[13] = new Audio('/music/audio/13.mp3');
-// sounds[14] = new Audio('/music/audio/14.mp3');
-// sounds[15] = new Audio('/music/audio/15.mp3');
 
 //p5
 new p5();
@@ -106,64 +46,109 @@ ins[15] = document.getElementById("ins15");
 
 //play instrument
 function p1(){
+  ins[1].style.transition = 'transform .2s';
+  ins[1].style.transform = 'scale(1.2)';
   sounds[1].playMode('restart');
   sounds[1].play();
+  setTimeout(function(){ins[1].style.transform = 'scale(1)'; }, 200);
 }
 function p2(){
+  ins[2].style.transition = 'transform .2s';
+  ins[2].style.transform = 'scale(1.2)';
   sounds[2].playMode('restart');
   sounds[2].play();
+  setTimeout(function(){ins[2].style.transform = 'scale(1)'; }, 200);
 }
 function p3(){
+  ins[3].style.transition = 'transform .2s';
+  ins[3].style.transform = 'scale(1.2)';
   sounds[3].playMode('restart');
   sounds[3].play();
+  setTimeout(function(){ins[3].style.transform = 'scale(1)'; }, 200);
 }
 function p4(){
+  ins[4].style.transition = 'transform .2s';
+  ins[4].style.transform = 'scale(1.2)';
   sounds[4].playMode('restart');
   sounds[4].play();
+  setTimeout(function(){ins[4].style.transform = 'scale(1)'; }, 200);
 }
 function p55(){
+  ins[5].style.transition = 'transform .2s';
+  ins[5].style.transform = 'scale(1.2)';
   sounds[5].playMode('restart');
   sounds[5].play();
+  setTimeout(function(){ins[5].style.transform = 'scale(1)'; }, 200);
 }
 function p6(){
+  ins[6].style.transition = 'transform .2s';
+  ins[6].style.transform = 'scale(1.2)';
   sounds[6].playMode('restart');
   sounds[6].play();
+  setTimeout(function(){ins[6].style.transform = 'scale(1)'; }, 200);
 }
 function p7(){
+  ins[7].style.transition = 'transform .2s';
+  ins[7].style.transform = 'scale(1.2)';
   sounds[7].playMode('restart');
   sounds[7].play();
+  setTimeout(function(){ins[7].style.transform = 'scale(1)'; }, 200);
 }
 function p8(){
+  ins[8].style.transition = 'transform .2s';
+  ins[8].style.transform = 'scale(1.2)';
   sounds[8].playMode('restart');
   sounds[8].play();
+  setTimeout(function(){ins[8].style.transform = 'scale(1)'; }, 200);
 }
 function p9(){
+  ins[9].style.transition = 'transform .2s';
+  ins[9].style.transform = 'scale(1.2)';
   sounds[9].playMode('restart');
   sounds[9].play();
+  setTimeout(function(){ins[9].style.transform = 'scale(1)'; }, 200);
 }
 function p10(){
+  ins[10].style.transition = 'transform .2s';
+  ins[10].style.transform = 'scale(1.2)';
   sounds[10].playMode('restart');
   sounds[10].play();
+  setTimeout(function(){ins[10].style.transform = 'scale(1)'; }, 200);
 }
 function p11(){
+  ins[11].style.transition = 'transform .2s';
+  ins[11].style.transform = 'scale(1.2)';
   sounds[11].playMode('restart');
   sounds[11].play();
+  setTimeout(function(){ins[11].style.transform = 'scale(1)'; }, 200);
 }
 function p12(){
+  ins[12].style.transition = 'transform .2s';
+  ins[12].style.transform = 'scale(1.2)';
   sounds[12].playMode('restart');
   sounds[12].play();
+  setTimeout(function(){ins[12].style.transform = 'scale(1)'; }, 200);
 }
 function p13(){
+  ins[13].style.transition = 'transform .2s';
+  ins[13].style.transform = 'scale(1.2)';
   sounds[13].playMode('restart');
   sounds[13].play();
+  setTimeout(function(){ins[13].style.transform = 'scale(1)'; }, 200);
 }
 function p14(){
+  ins[14].style.transition = 'transform .2s';
+  ins[14].style.transform = 'scale(1.2)';
   sounds[14].playMode('restart');
   sounds[14].play();
+  setTimeout(function(){ins[14].style.transform = 'scale(1)'; }, 200);
 }
 function p15(){
+  ins[15].style.transition = 'transform .2s';
+  ins[15].style.transform = 'scale(1.2)';
   sounds[15].playMode('restart');
   sounds[15].play();
+  setTimeout(function(){ins[15].style.transform = 'scale(1)'; }, 200);
 }
 
 
@@ -188,7 +173,9 @@ function p15(){
 function keyPressed(){
   // console.log("hello");
   if (keyCode === 65) {
+
     p1();
+
   } else if (keyCode === 87){
     p2();
   } else if (keyCode === 82){
