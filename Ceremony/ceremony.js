@@ -1,10 +1,7 @@
 var flippedPage = document.getElementsByClassName('content');
 // for (var i=0; i<flippedPage.length; i++){
 //   flippedPage[i].onclick=function(){
-//
-// // this.style.backgroundImage = "./images/jili.jpg"
 // this.style.animation="FlipPage160deg 3s forwards";
-//
 //   }
 // }
 
@@ -20,7 +17,7 @@ var flippedPage = document.getElementsByClassName('content');
 //
 // oddPageFlip();
 
-function oddPageFlip(a){
+// function oddPageFlip(a){
   // flippedPage[a].onmouseover = function(){
   //   this.style.transform= "rotateY(10deg)";
   // }
@@ -28,14 +25,14 @@ function oddPageFlip(a){
   //   this.style.transform = "rotateY(-10deg)";
   // }
   // flippedPage[a].onclick= function(){
-    a.style.transition="transform 1s";
-    a.style.transform="rotateY(180deg)";
-  }
+  //   a.style.transition="transform 1s";
+  //   a.style.transform="rotateY(180deg)";
+  // }
 // }
-for (var i=0; i<flippedPage.length; i++){
-  flippedPage[i].onclick= oddPageFlip(flippedPage[i]);
-  console.log(i);
-}
+// for (var i=0; i<flippedPage.length; i++){
+//   flippedPage[i].onclick= oddPageFlip(flippedPage[i]);
+//   console.log(i);
+// }
 
 // for (var i=0; i<flippedPage.length; i++){
 //   flippedPage[i].onclick = function(){
@@ -43,12 +40,14 @@ for (var i=0; i<flippedPage.length; i++){
 //   }
 // }
 
-// for (var i=0; i<flippedPage.length; i++){
-//   flippedPage[i].addEventListener("click", function(){
-//     this.style.transition="transform 1s";
-//     this.style.transform="rotateY(160deg)";
-//   });
-//   flippedPage[i].addEventListener("mouseover", function(){
-// this.style.transform= "rotateY(10deg)";
-//   });
-// }
+//? rotation does not work
+for (var i=0; i<flippedPage.length; i++){
+  flippedPage[i].addEventListener("click", function(){
+    this.style.transition="transform 1s";
+    this.style.transform="rotateY(160deg)";
+  });
+  flippedPage[i].addEventListener("mouseover", function(){
+this.style.transform= "rotateY(10deg)";
+  });
+
+}

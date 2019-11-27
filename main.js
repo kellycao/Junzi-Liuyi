@@ -5,8 +5,8 @@ var b = document.getElementById('b');
 window.onload=function(){
   a.style.transition = "all 4s";
   b.style.transition = "all 4s";
-  a.style.transform="translateY(-50%)";
-  b.style.transform="translateY(50%)";
+  a.style.transform="translateY(50%)";
+  b.style.transform="translateY(-50%)";
   a.style.opacity= 1;
   b.style.opacity= 1;
 }

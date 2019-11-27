@@ -86,16 +86,92 @@ function loadGame(){
     }
 
 
-    var c2 = document.getElementById("animCanvas");
-    c2.height = h;
-    c2.width = w;
-    var ctx2 = c2.getContext("2d");
 
+    //draw targetboard
 
     var c = document.getElementById("myCanvas");
     c.height = h;
     c.width = w;
     var ctx = c.getContext("2d");
+
+    var c2 = document.getElementById("animCanvas");
+    c2.height = h;
+    c2.width = w;
+    var ctx2 = c2.getContext("2d");
+
+        var board = {
+            x:w-40,
+            y:h/2,
+            dy:4,
+            height:150,
+            width:100
+        }
+
+        var boardY;
+        var boardMove = false;
+        var totalArr = 5;
+        updArr(totalArr);
+
+//? drawBoard behind the arrow?
+        function drawBoard() {
+          ctx.beginPath();
+        ctx.ellipse(board.x + board.width / 6, board.y, board.width / 2, board.height / 2, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#f7e394";
+        ctx.strokeStyle = "#804C2A";
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.ellipse(board.x + board.width / 6, board.y, board.width / 3, board.height / 8 * 3, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#61001E";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.ellipse(board.x + board.width / 6, board.y, board.width / 16 * 3, board.height / 12 * 3, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#f7e394";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.ellipse(board.x + board.width / 6, board.y, board.width / 12, 15, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#B80800";
+        ctx.fill();
+            ctx.fillStyle = "#000";
+
+        //board out of screen
+            if(board.y >= h || board.y <= 0){
+                board.dy *= -1;
+            }
+
+
+    var checkArrowMoveWithBoard1 = false;
+    var checkArrowMoveWithBoard2 = false;
+    //board move constantly
+            if(autoMove){
+                board.y += board.dy;
+                if(checkArrowMoveWithBoard1){
+                    arrow1.moveArrowWithBoard(1);
+                }
+                else if(checkArrowMoveWithBoard2){
+                    arrow2.moveArrowWithBoard(1);
+                }
+            }
+            else{
+
+                if(boardMove){
+                  //board move 1 unit
+                    if(Math.abs(board.y - boardY) > 5){
+                        board.y += board.dy;
+                        arrow1.moveArrowWithBoard(1);
+                        arrow2.moveArrowWithBoard(1);
+                    }
+                }
+                else{
+                  //board not move
+                    if(Math.abs(board.y - boardY) > 5){
+                        board.y -= board.dy;
+                        arrow1.moveArrowWithBoard(-1);
+                        arrow2.moveArrowWithBoard(-1);
+                    }
+                }
+            }
+        }
 
 
 //draw bow
@@ -143,79 +219,6 @@ function loadGame(){
     }
 
 
-//draw targetboard
-    var board = {
-        x:w-40,
-        y:h/2,
-        dy:4,
-        height:150,
-        width:100
-    }
-
-    var boardY;
-    var boardMove = false;
-    var totalArr = 5;
-    updArr(totalArr);
-
-    function drawBoard() {
-      ctx.beginPath();
-    ctx.ellipse(board.x + board.width / 6, board.y, board.width / 2, board.height / 2, 0, 0, Math.PI * 2);
-    ctx.fillStyle = "#f7e394";
-    ctx.strokeStyle = "#804C2A";
-    ctx.fill();
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.ellipse(board.x + board.width / 6, board.y, board.width / 3, board.height / 8 * 3, 0, 0, Math.PI * 2);
-    ctx.fillStyle = "#61001E";
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(board.x + board.width / 6, board.y, board.width / 16 * 3, board.height / 12 * 3, 0, 0, Math.PI * 2);
-    ctx.fillStyle = "#f7e394";
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(board.x + board.width / 6, board.y, board.width / 12, 15, 0, 0, Math.PI * 2);
-    ctx.fillStyle = "#B80800";
-    ctx.fill();
-        ctx.fillStyle = "#000";
-
-    //board out of screen
-        if(board.y >= h || board.y <= 0){
-            board.dy *= -1;
-        }
-
-
-var checkArrowMoveWithBoard1 = false;
-var checkArrowMoveWithBoard2 = false;
-//board move constantly
-        if(autoMove){
-            board.y += board.dy;
-            if(checkArrowMoveWithBoard1){
-                arrow1.moveArrowWithBoard(1);
-            }
-            else if(checkArrowMoveWithBoard2){
-                arrow2.moveArrowWithBoard(1);
-            }
-        }
-        else{
-
-            if(boardMove){
-              //board move 1 unit
-                if(Math.abs(board.y - boardY) > 5){
-                    board.y += board.dy;
-                    arrow1.moveArrowWithBoard(1);
-                    arrow2.moveArrowWithBoard(1);
-                }
-            }
-            else{
-              //board not move
-                if(Math.abs(board.y - boardY) > 5){
-                    board.y -= board.dy;
-                    arrow1.moveArrowWithBoard(-1);
-                    arrow2.moveArrowWithBoard(-1);
-                }
-            }
-        }
-    }
 
 //draw arrow
     function Arrow(){
@@ -386,6 +389,7 @@ var checkArrowMoveWithBoard2 = false;
           }
           arrows++;
     }
+
 
     document.getElementById("animCanvas").addEventListener("click",shoot);
      document.body.addEventListener("keydown",shoot);
