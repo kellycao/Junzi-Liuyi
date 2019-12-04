@@ -14,3 +14,6 @@ Problems that have not been fixed are listed as follows:
 
 Shuyue is responsible for the music page, ride page and math page.
 Problems that have not been fixed are listed as follows:
+1. [Music] The alignment is awkward
+2. [Ride] The game does not work properly
+3. [Math] The picture won't show.
