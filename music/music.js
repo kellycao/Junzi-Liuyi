@@ -5,21 +5,21 @@ let sounds=[];
 function onload(){
 
   sounds[0];//place holder
-  sounds[1] = loadSound('/music/audio/1.mp3');
-  sounds[2] = loadSound('/music/audio/2.mp3');
-  sounds[3] = loadSound('/music/audio/3.mp3');
-  sounds[4] = loadSound('/music/audio/4.mp3');
-  sounds[5] = loadSound('/music/audio/5.mp3');
-  sounds[6] = loadSound('/music/audio/6.mp3');
-  sounds[7] = loadSound('/music/audio/7.mp3');
-  sounds[8] = loadSound('/music/audio/8.mp3');
-  sounds[9] = loadSound('/music/audio/9.mp3');
-  sounds[10] = loadSound('/music/audio/10.mp3');
-  sounds[11] = loadSound('/music/audio/11.mp3');
-  sounds[12] = loadSound('/music/audio/12.mp3');
-  sounds[13] = loadSound('/music/audio/13.mp3');
-  sounds[14] = loadSound('/music/audio/14.mp3');
-  sounds[15] = loadSound('/music/audio/15.mp3');
+  sounds[1] = loadSound('music/audio/1.mp3');
+  sounds[2] = loadSound('music/audio/2.mp3');
+  sounds[3] = loadSound('music/audio/3.mp3');
+  sounds[4] = loadSound('music/audio/4.mp3');
+  sounds[5] = loadSound('music/audio/5.mp3');
+  sounds[6] = loadSound('music/audio/6.mp3');
+  sounds[7] = loadSound('music/audio/7.mp3');
+  sounds[8] = loadSound('music/audio/8.mp3');
+  sounds[9] = loadSound('music/audio/9.mp3');
+  sounds[10] = loadSound('music/audio/10.mp3');
+  sounds[11] = loadSound('music/audio/11.mp3');
+  sounds[12] = loadSound('music/audio/12.mp3');
+  sounds[13] = loadSound('music/audio/13.mp3');
+  sounds[14] = loadSound('music/audio/14.mp3');
+  sounds[15] = loadSound('music/audio/15.mp3');
 }
 
 onload();
