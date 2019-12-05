@@ -8,9 +8,9 @@ var rider = new Image();
 var bg = new Image();
 var cloud = new Image();
 
-rider.src = "images/rider.png";
-bg.src = "images/bg.jpg";
-cloud.src = "images/cloud.png";
+rider.src = "/Ride/images/rider.png";
+bg.src = "/Ride/images/bg.jpg";
+cloud.src = "/Ride/images/cloud.png";
 
 //constants
 //locagtions
@@ -66,7 +66,7 @@ function start() {
       event.preventDefault();
     }
 
-    if (clouds[i].x == 70) {
+    if (clouds[i].x == 380) {
       score++;
     }
     ctx.fillStyle = "#000";
