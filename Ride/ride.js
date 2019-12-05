@@ -70,8 +70,8 @@ function start() {
       score++;
     }
     ctx.fillStyle = "#000";
-    ctx.font = "20px Verdana";
-    ctx.fillText("Score : " + score, 10, cvs.height - 20);
+    ctx.font = "25px Ma Shan Zheng";
+    ctx.fillText("得分: " + score, 10, 35);
 
   }
 

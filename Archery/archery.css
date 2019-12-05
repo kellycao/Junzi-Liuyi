@@ -21,7 +21,7 @@ body {
 
 #score {
   position:absolute;
-  top:1em;
+  top:2em;
   left:0;
   width:100%;
   text-align:center;
@@ -82,7 +82,7 @@ body {
 
 #startMenu {
     position:absolute;
-    top:8em;
+    top:15em;
     left:0;
     z-index:1000;
     width:100%;

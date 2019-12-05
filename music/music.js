@@ -2,7 +2,7 @@
 //p5
 new p5();
 let sounds=[];
-function preload(){
+function onload(){
 
   sounds[0];//place holder
   sounds[1] = loadSound('/music/audio/1.mp3');
@@ -22,7 +22,7 @@ function preload(){
   sounds[15] = loadSound('/music/audio/15.mp3');
 }
 
-preload();
+onload();
 
 
 //

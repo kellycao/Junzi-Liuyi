@@ -12,15 +12,21 @@ body {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-attachment: fixed;
+  font-family: "Ma Shan Zheng", cursive;
+font-size: 40px;
 }
 
 .container{
   text-align: center;
-  margin: 0 auto;
+  margin: 0 9em;
   margin-top: 100px;
   /* position: relative; */
 }
 
 #canvas{
-  display: inline-block;
+  /* display: inline-block; */
+}
+
+#counter{
+  margin-left: 3em;
 }
