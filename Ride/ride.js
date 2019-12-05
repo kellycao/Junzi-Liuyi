@@ -8,9 +8,9 @@ var rider = new Image();
 var bg = new Image();
 var cloud = new Image();
 
-rider.src = "/Ride/images/rider.png";
-bg.src = "/Ride/images/bg.jpg";
-cloud.src = "/Ride/images/cloud.png";
+rider.src = "Ride/images/rider.png";
+bg.src = "Ride/images/bg.jpg";
+cloud.src = "Ride/images/cloud.png";
 
 //constants
 //locagtions
